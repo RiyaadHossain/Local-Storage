@@ -16,3 +16,17 @@ const addToDB = item => {
     // Stored the Updated value
     localStorage.setItem('storedItem', JSON.stringify(cart))
 }
+
+
+/* ========================= Function: To Delete Item in the Database ========================= */
+
+const deleteItem = item => {
+    // Geth the Stored Item 
+    const storedItem = JSON.parse(localStorage.getItem('storedItem'))
+    if (storedItem) {
+        delete storedItem[item]
+    }
+
+    // Set the Updated Value 
+    localStorage.setItem('storedItem', JSON.stringify(storedItem))
+}
