@@ -2,7 +2,7 @@
 /* ========================= Function: To Add Item in the Database ========================= */
 
 const addToDB = item => {
-    let cart = []
+    let cart = {}
     //  Get the Stored Item 
     const storedItem = localStorage.getItem('storedItem')
     if (storedItem) {
